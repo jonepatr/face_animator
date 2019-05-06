@@ -100,5 +100,11 @@ venv.bak/
 # mkdocs documentation
 /site
 
+# Mac os files
+.DS_Store
+
 # mypy
 .mypy_cache/
+
+# Model folder
+model
