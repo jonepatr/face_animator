@@ -13,6 +13,6 @@ To use it:
 
 `http://localhost:5000/info` to see what blendshapes you have available to alter
 
-And to render a png send either a GET request using query params for the the blendshapes, such as: `http://localhost:5000?MouthUp=0.9&EyeIn_L=0.1&rotation=euler_xyz,0.4,0.6,0.1` or a POST request to `http://localhost:5000` with a json containing the blendshape as body of the request e.g. `{"MouthUp": 0.9, "EyeIn_L": 0.1, "rotation": "euler_xyz,0.4,0.6,0.1"}`.
+To render a png send a POST request to `http://localhost:5000` with a json containing parameters from `/info` as the body of the request. If parameters are ommitted the defaults are used instead.
 
-The rotation parameter is always available independently of the used model. Currently three methods are supported, `euler_xyz,X,Y,Z`, `quaternion_wxyz,W,X,Y,Z` or `transformation_matrix,a,b,c...p` where a,b,c...p is a flattened 4x4 transformation matrix.
+The rotations are in euler xyz format. 
